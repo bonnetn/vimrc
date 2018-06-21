@@ -188,7 +188,7 @@ Plug 'wikitopian/hardmode'
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Disable escape
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 
 " disable :wq
 cabbrev wq w
