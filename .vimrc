@@ -209,3 +209,6 @@ call plug#end()
 " colorscheme molokai
 colorscheme dark_eyes
 
+" Speed up macro
+set nolazyredraw
+
