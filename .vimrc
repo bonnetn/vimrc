@@ -1,3 +1,5 @@
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
 set scrolloff=4
 set colorcolumn=80
 syntax enable
