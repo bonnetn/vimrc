@@ -21,6 +21,7 @@ set ruler
 
 " Ignore case
 set ignorecase
+set smartcase
 
 " Highlight search
 set hlsearch
