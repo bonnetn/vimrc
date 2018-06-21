@@ -1,5 +1,8 @@
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
+
+set wildmenu
+set wildignore=*.o,*~,*.pyc
 set scrolloff=4
 set colorcolumn=80
 syntax enable
