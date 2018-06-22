@@ -1,6 +1,8 @@
 " My .vimrc
 " - Nicolas Bonnet
 
+" Buffers are hidden by default
+set hidden
 
 " Add handy shortcuts to switch between buffers
 nnoremap <C-n> :bnext<CR>
