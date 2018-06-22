@@ -1,21 +1,36 @@
+" My .vimrc
+" - Nicolas Bonnet
+
+
+" Add handy shortcuts to switch between buffers
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
 
+" Speed up macro
+set nolazyredraw
+
+" Add a menu when autocompleting filenames
 set wildmenu
 set wildignore=*.o,*~,*.pyc
+
+" Always keep x lines between the cursor and the end/top of the file
 set scrolloff=4
-set colorcolumn=80
+
+" Enable synthax highlighting
 syntax enable
+
 " Width of TAB char set tabstop=2 " For >> 
 set shiftwidth=2  
+
 " Insert *softtabstop* spaces instead of TAB char
 set expandtab
 set softtabstop=2
 
 " Display line numbers
-set number "relativenumber    " toggle hybrid line numbers
+set number
 
 " Display a bar at 80 chars
+set colorcolumn=80
 set textwidth=80
 
 " Sudo write
@@ -43,10 +58,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Colorscheme
-"colorscheme desert
-"set background=dark
-
 " Encoding
 set encoding=utf8
 
@@ -55,28 +66,18 @@ set nobackup
 set nowb
 set noswapfile
 
+" Will delete a whole tab (4 spaces) when backscaping
 set smarttab
 
 " Auto indent
 set ai
 set si
 
+" Use 256 colors
 set t_Co=256
-
-" Tab navigation like Firefox.
-"nnoremap <C-S-tab> :tabprevious<CR>
-"nnoremap <C-tab>   :tabnext<CR>
-"nnoremap <C-t>     :tabnew<CR>
-""inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-""inoremap <C-tab>   <Esc>:tabnext<CR>i
-"inoremap <C-t>     <Esc>:tabnew<CR>
-
+"
 " Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-
-" Make sure you use single quotes
 
 " On-demand loading
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -135,9 +136,6 @@ Plug 'vim-scripts/colorizer'
 " Comment evrything :D
 Plug 'tpope/vim-commentary'
 
-" Next val (Ctrl A Ctrl X)
-Plug 'vim-scripts/nextval'
-
 " Tag list (open with F8)
 Plug 'vim-scripts/taglist.vim'
 
@@ -145,7 +143,9 @@ Plug 'vim-scripts/taglist.vim'
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 " Monokai theme
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
+
+" Dark eyes theme
 Plug 'bf4/vim-dark_eyes'
 
 " Javascript improvments
@@ -158,9 +158,6 @@ Plug 'vim-scripts/AutoComplPop'
 
 " Python ident
 Plug 'vim-scripts/indentpython.vim'
-
-" Auto complete with TAB
-Plug 'ervandew/supertab'
 
 " Edit GPG files
 Plug 'jamessan/vim-gnupg'
@@ -193,10 +190,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'wikitopian/hardmode'
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
-" Disable escape
-" inoremap <esc> <nop>
-
-" disable :wq
+" disable :wq (I try to use ZZ instead)
 cabbrev wq w
 
 " For vim markdown (both)
@@ -208,7 +202,4 @@ call plug#end()
 
 " colorscheme molokai
 colorscheme dark_eyes
-
-" Speed up macro
-set nolazyredraw
 
