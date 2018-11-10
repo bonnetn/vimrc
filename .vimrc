@@ -14,6 +14,10 @@ nnoremap <C-p> :bprevious<CR>
 " Speed up macro
 set nolazyredraw
 
+let mapleader=","
+
+set timeoutlen=2000
+
 " Add a menu when autocompleting filenames
 set wildmenu
 set wildignore=*.o,*~,*.pyc
