@@ -188,3 +188,5 @@ call plug#end()
 " colorscheme molokai
 colorscheme dark_eyes
 
+" Prevent from hiding tags in Markdown
+set conceallevel=0
