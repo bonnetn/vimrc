@@ -163,8 +163,6 @@ Plug 'jamessan/vim-gnupg'
 " Fold python
 Plug 'tmhedberg/SimpylFold'
 let g:SimpylFold_docstring_preview = 0
-" let g:SimpylFold_fold_import = 0
-" let g:SimpylFold_fold_docstring	= 0
 set foldlevelstart=1000 " Unfold everything by default
 
 " Indent line
