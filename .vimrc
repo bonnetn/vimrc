@@ -160,20 +160,6 @@ Plug 'vim-scripts/indentpython.vim'
 " Edit GPG files
 Plug 'jamessan/vim-gnupg'
 
-" Pep8
-Plug 'nvie/vim-flake8'
-let g:flake8_show_in_file=1
-let g:flake8_show_in_gutter=1
-" to use colors defined in the colorscheme
-highlight link Flake8_Error      Error
-highlight link Flake8_Warning    WarningMsg
-highlight link Flake8_Complexity WarningMsg
-highlight link Flake8_Naming     WarningMsg
-highlight link Flake8_PyFlake    WarningMsg
-
-" Auto run pep8 on python files
-autocmd BufWritePost *.py call Flake8()
-
 " Fold python
 Plug 'tmhedberg/SimpylFold'
 let g:SimpylFold_docstring_preview = 0
