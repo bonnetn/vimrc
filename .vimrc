@@ -40,7 +40,7 @@ set number
 
 " Display a bar at 80 chars
 set colorcolumn=80
-set textwidth=80
+set textwidth=0
 
 " Sudo write
 command W w !sudo tee % > /dev/null
