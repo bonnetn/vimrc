@@ -168,9 +168,9 @@ set foldlevelstart=1000 " Unfold everything by default
 " Indent line
 Plug 'Yggdroot/indentLine'
 
-" Hardmode
-Plug 'wikitopian/hardmode'
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" Hardtime
+Plug 'takac/vim-hardtime'
+let g:hardtime_default_on = 1
 
 " disable :wq (I try to use ZZ instead)
 cabbrev wq w
