@@ -176,8 +176,9 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 cabbrev wq w
 
 " For vim markdown (both)
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
+
 
 " Initialize plugin system
 call plug#end()
