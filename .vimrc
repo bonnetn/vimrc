@@ -125,11 +125,6 @@ let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_winsize = 15
 nnoremap <silent> <F9> :Vexplore<CR>
 
-" Auto completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
-
 " Close automatically {}
 Plug 'Raimondi/delimitMate'
 
