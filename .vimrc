@@ -1,6 +1,9 @@
 " My .vimrc
 " - Nicolas Bonnet
 
+" auto reload vimrc when editing it
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
 " Buffers are hidden by default
 set hidden
 
