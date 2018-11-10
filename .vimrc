@@ -179,6 +179,8 @@ cabbrev wq w
 "Plug 'godlygeek/tabular'
 "Plug 'plasticboy/vim-markdown'
 
+" Easy motion
+Plug 'easymotion/vim-easymotion'
 
 " Initialize plugin system
 call plug#end()
