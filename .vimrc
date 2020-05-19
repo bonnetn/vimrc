@@ -14,7 +14,7 @@ nnoremap <C-p> :bprevious<CR>
 " Speed up macro
 set nolazyredraw
 
-let mapleader=","
+let mapleader=" "
 
 set timeoutlen=2000
 
@@ -36,11 +36,8 @@ set expandtab
 set softtabstop=2
 
 " Display line numbers
+set relativenumber
 set number
-
-" Display a bar at 80 chars
-set colorcolumn=80
-set textwidth=0
 
 " Sudo write
 command W w !sudo tee % > /dev/null
@@ -88,15 +85,6 @@ set t_Co=256
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
 " Pretty bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -111,76 +99,32 @@ Plug 'tpope/vim-repeat'
 " Surround
 Plug 'tpope/vim-surround'
 
-" Fugitive (git)
-Plug 'tpope/vim-fugitive'
-
-" Tyepscript
-Plug 'leafgarland/typescript-vim'
-
-" Vinegar
-Plug 'tpope/vim-vinegar'
-
-let g:netrw_liststyle = 3
-let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-let g:netrw_winsize = 15
-nnoremap <silent> <F9> :Vexplore<CR>
-
-" Close automatically {}
-Plug 'Raimondi/delimitMate'
-
 " Color the #FF00FF tags
 Plug 'vim-scripts/colorizer'
 
 " Comment evrything :D
 Plug 'tpope/vim-commentary'
 
-" Tag list (open with F8)
-Plug 'vim-scripts/taglist.vim'
-
-" Bind tags to F8
-nnoremap <silent> <F8> :TlistToggle<CR>
-
-" Monokai theme
-" Plug 'tomasr/molokai'
-
 " Dark eyes theme
 Plug 'bf4/vim-dark_eyes'
-
-" Javascript improvments
-Plug 'pangloss/vim-javascript'
-let g:javascript_plugin_jsdoc = 1
-Plug 'crusoexia/vim-javascript-lib'
-
-" Automatically opens popup menu for completions
-Plug 'vim-scripts/AutoComplPop'
-
-" Python ident
-Plug 'vim-scripts/indentpython.vim'
-
-" Edit GPG files
-Plug 'jamessan/vim-gnupg'
-
-" Fold python
-Plug 'tmhedberg/SimpylFold'
-let g:SimpylFold_docstring_preview = 0
-set foldlevelstart=1000 " Unfold everything by default
-
-" Indent line
-Plug 'Yggdroot/indentLine'
-
-" Hardtime
-Plug 'takac/vim-hardtime'
-let g:hardtime_default_on = 1
 
 " disable :wq (I try to use ZZ instead)
 cabbrev wq w
 
-" For vim markdown (both)
-"Plug 'godlygeek/tabular'
-"Plug 'plasticboy/vim-markdown'
-
 " Easy motion
 Plug 'easymotion/vim-easymotion'
+map <Leader><Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader><Leader>l <Plug>(easymotion-overwin-line)
+
+map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
+" Increase/Decrease dates
+Plug 'tpope/vim-speeddating'
+
+" Fuzzy finding
+Plug '/usr/local/opt/fzf'
+
 
 " Initialize plugin system
 call plug#end()
@@ -188,5 +132,6 @@ call plug#end()
 " colorscheme molokai
 colorscheme dark_eyes
 
-" Prevent from hiding tags in Markdown
-set conceallevel=0
+set nowrap
+set colorcolumn=0
+
