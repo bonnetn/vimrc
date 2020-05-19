@@ -1,7 +1,9 @@
-:set relativenumber
-:set number
-:set incsearch
-:set showmode
-:set ignorecase
-:set smartcase
-:set surround
+set relativenumber
+set number
+set incsearch
+set showmode
+set ignorecase
+set smartcase
+set surround
+let mapleader=" "
+set easymotion
