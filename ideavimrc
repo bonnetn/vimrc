@@ -10,13 +10,6 @@ set easymotion
 
 set so=3
 
-nmap <leader>d :action GotoDeclaration<cr>
-nmap <leader>i :action GotoImplementation<cr>
-
-nmap <leader>f :action GotoFile<cr>
-nmap <leader>c :action GotoClass<cr>
-nmap <leader>s :action GotoSymbol<cr>
-nmap <leader>d :action ShowErrorDescription<cr>
 nmap == :action ReformatCode<cr>
 
 " Won't work in visual mode (with vmap) for some reason.
