@@ -81,53 +81,24 @@ set si
 
 " Use 256 colors
 set t_Co=256
-"
-" Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
-
-" Pretty bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 let g:airline_powerline_fonts = 1
 set laststatus=2
 let g:airline_theme = "jellybeans"
 
-" Repeat.vim
-Plug 'tpope/vim-repeat'
-
-" Surround
-Plug 'tpope/vim-surround'
-
-" Color the #FF00FF tags
-Plug 'vim-scripts/colorizer'
-
-" Comment evrything :D
-Plug 'tpope/vim-commentary'
-
-" Dark eyes theme
-Plug 'bf4/vim-dark_eyes'
-
 " disable :wq (I try to use ZZ instead)
 cabbrev wq w
 
 " Easy motion
-Plug 'easymotion/vim-easymotion'
 map <Leader><Leader>l <Plug>(easymotion-bd-jk)
 nmap <Leader><Leader>l <Plug>(easymotion-overwin-line)
 
 map  <Leader><Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
-" Increase/Decrease dates
-Plug 'tpope/vim-speeddating'
-
 " Fuzzy finding
-Plug '/usr/local/opt/fzf'
+" Plug '/usr/local/opt/fzf'
 
-
-" Initialize plugin system
-call plug#end()
 
 " colorscheme molokai
 colorscheme dark_eyes
