@@ -1,5 +1,5 @@
 " My .vimrc
-" - Nicolas Bonnettpope/vim-sleuth
+" - Nicolas Bonnet
 
 " Because why not?
 set mouse=a
@@ -46,7 +46,6 @@ set nobackup
 set nowb
 set noswapfile
 
-
 " Auto indent
 set ai
 set si
@@ -56,7 +55,6 @@ cabbrev wq w
 
 set nowrap
 set colorcolumn=0
-
 
 set termguicolors
 
