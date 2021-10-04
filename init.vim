@@ -94,6 +94,14 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 Plug 'junegunn/vim-peekaboo'
 
+Plug 'scalameta/nvim-metals'
+set shortmess-=F
+augroup lsp
+  au!
+  au FileType scala,sbt lua require("metals").initialize_or_attach({})
+augroup end
+
+
 call plug#end()
 
 lua << EOF
@@ -165,7 +173,9 @@ require'nvim-treesitter.configs'.setup {
   indent = {
     enable = true
   }
-}
+}  
+metals_config = require("metals").bare_config
+metals_config.init_options.statusBarProvider = "on"
 
 EOF
 
