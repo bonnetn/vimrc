@@ -4,9 +4,7 @@ set incsearch
 set showmode
 set ignorecase
 set smartcase
-set surround
 let mapleader=" "
-set easymotion
 
 set so=3
 
@@ -15,3 +13,16 @@ nmap == :action ReformatCode<cr>
 " Won't work in visual mode (with vmap) for some reason.
 " Use default map of <c-/> for that.
 nmap gcc :action CommentByLineComment<cr>
+
+" Requires ideavim-quickscope plugin
+" Highlights the target letters when pressing f or t.
+set quickscope
+
+" Allow to target an indentation level.
+Plug 'michaeljsmith/vim-indent-object'
+
+" Surround text.
+Plug 'tpope/vim-surround'
+
+" Requires ideavim-easymotion and acejump plugin.
+Plug 'easymotion/vim-easymotion'
